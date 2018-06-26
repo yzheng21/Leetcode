@@ -1,19 +1,7 @@
 '''
-There are two sorted arrays nums1 and nums2 of size m and n respectively.
+二分答案的方法，时间复杂度 O(log(range) * (log(n) + log(m)))O(log(range)∗(log(n)+log(m)))
 
-Find the median of the two sorted arrays. The overall run time complexity should be O(log (m+n)).
-
-Example 1:
-
-nums1 = [1, 3] nums2 = [2]
-
-The median is 2.0
-
-Example 2:
-
-nums1 = [1, 2] nums2 = [3, 4]
-
-The median is (2 + 3)/2 = 2.5
+其中 range 为最小和最大的整数之间的范围。
 '''
 class Solution(object):
     def _findMedianSortedArrays(self, nums1, nums2):

@@ -16,3 +16,4 @@ class Solution(object):
             if target-num in d:
                 return [d[target-num],i]
             d[num] = i
+        return [-1,-1]

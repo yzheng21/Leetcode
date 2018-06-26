@@ -32,16 +32,17 @@ Binary tree [1,2,3], return false.
 
 class Solution(object):
     def isValidBST(self, root):
-        prev = -float('inf')
-        stack = [(1,root)]
-        while stack:
-            p = stack.pop()
-            if not p[1]:
-                continue
-            if p[0] == 0:
-                if p[1].val <= prev:
-                    return False
-                prev = p[1].val
-            else:
-                stack.extend((1,p[1].right),(0,p[1]),(1,p[1].left))
+        node = root
+        pre = -float('inf')
+        stack = []
+        while node or stack:
+            while node:
+                stack.append(node)
+                node = node.left
+            node = stack.pop()
+            if pre and pre.val >= node.val:
+                return False
+            pre = node
+            node = node.right
         return True
+

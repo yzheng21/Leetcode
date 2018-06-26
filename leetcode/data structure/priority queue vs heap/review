@@ -1,0 +1,8 @@
+                TreeMap     Heap       Priorityqueue
+1 insert()       logn       logn          logn
+2 delete()       logn       logn          O(n)/X
+3 pop()          logn       logn          logn
+4 find()         logn       logn          X
+5 modify()       logn       logn          X
+6 min/max()      logn       1             1
+7 upper/lower    logn       X             X

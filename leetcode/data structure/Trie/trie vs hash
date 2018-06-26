@@ -1,0 +1,3 @@
+hash   vs     Trie
+O(1)   time   O(1)
+bad    space  better
